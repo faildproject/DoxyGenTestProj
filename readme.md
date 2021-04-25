@@ -1,21 +1,10 @@
-/** \mainpage Doxygen Examples
- *
- * This project helps user to draw shapes.
- * Currently two types of shapes can be drawn:
- * - \subpage drawingRectanglePage "How to draw rectangle?"
- *
- * - \subpage drawingCirclePage "How to draw circle?"
- *
- */ 
+# Overview
+This Documentation will give some rules for Codestyle
 
-/** \page drawingRectanglePage How to draw rectangle?
- *
- * Lorem ipsum dolor sit amet
- *
- */
+## Functions
++ Begin the functionname with a small letter and end with "Fkt" 
++ Starts parameter with "t_"
++ If a function consumes an interface, overgive an reference to this.
 
-/** \page drawingCirclePage How to draw circle?
- *
- * This page is about how to draw a circle.
- * Following sections describe circle:
- */
+Example: myFunctionFkt(Stream& t_stream);
+}
