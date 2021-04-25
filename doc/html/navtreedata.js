@@ -26,7 +26,8 @@ var NAVTREE =
 [
   [ "DoxyGenTest", "index.html", [
     [ "Overview", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html", [
-      [ "Functions", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md1", null ]
+      [ "Variables", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md1", null ],
+      [ "Functions", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md2", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
