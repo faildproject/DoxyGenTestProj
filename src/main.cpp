@@ -11,12 +11,12 @@
 
 #include <Arduino.h>
 #include <Utils.h>
-const int howmany = 10;
+const int HOWMANY = 10;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
-  helloWorldFkt(Serial, howmany);
+  helloWorldFkt(Serial, HOWMANY);
 }
 
 void loop() {
