@@ -12,6 +12,16 @@
 #include <Arduino.h>
 #include <Utils.h>
 const int HOWMANY = 10;
+int g_cnt = 0;
+
+const int LED_POUT = LED_BUILTIN; /**< Blue Onboard-LED */
+const int BTN_PIN = 34; /**< Where the Button is connected*/
+
+const int SDA_I2C = 22; /**< Dataline for I2C */
+const int SCL_I2C = 23; /**< Clockline for I2C */
+
+const int POTI_ADC = 27; /**< Readout the Poti-Voltage */
+const int DRIVER_DAC = 28; /**< Control a Fan via MOSFET */
 
 void setup() {
   // put your setup code here, to run once:
