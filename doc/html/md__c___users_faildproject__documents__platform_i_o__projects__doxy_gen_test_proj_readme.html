@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('md__c___users_faildproject__documents_
 <h1><a class="anchor" id="autotoc_md1"></a>
 Variables</h1>
 <ul>
-<li>All Variables allways lower case (myvar)</li>
+<li>All Variables allways lower case and delimited by "_" (my_var)</li>
 <li>Global Variables starts with "g_" (g_gloabal)</li>
 <li>Function Variables starts with "t_" (t_fktvar)</li>
 <li>Enums starts with (e_myenum)</li>
@@ -103,6 +103,7 @@ Variables</h1>
 <li>Interface Pins ends with Interface-Shortcut (i.E. _I2C, _SPI, _UART, _OW ...)</li>
 </ul>
 </li>
+<li>Objects are lowercase but ends with "Obj" (instance_from_classObj)</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Functions</h1>
@@ -111,7 +112,13 @@ Functions</h1>
 <li>Starts parameter with "t_"</li>
 <li>If a function consumes an interface, overgive an reference to this.</li>
 </ul>
-<p>Example: myFunctionFkt(Stream&amp; t_stream); </p>
+<p>Example: myFunctionFkt(Stream&amp; t_stream);</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Classes</h1>
+<ul>
+<li>Classes always Camlecase and ends with "Class"</li>
+<li>Objects as are lower Case and ends with "Obj" Example: MyOwnClass(); </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

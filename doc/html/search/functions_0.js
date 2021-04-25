@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['helloworldfkt_20',['helloWorldFkt',['../_utils_8cpp.html#a8a89064be9678d0d0ab4c58a900feb03',1,'helloWorldFkt(Stream &amp;t_stream, int t_howmany):&#160;Utils.cpp'],['../_utils_8h.html#a8a89064be9678d0d0ab4c58a900feb03',1,'helloWorldFkt(Stream &amp;t_stream, int t_howmany):&#160;Utils.cpp']]]
+  ['black_35',['black',['../main_8cpp.html#ac520717ff4f637dca1468eae2ae83428',1,'main.cpp']]],
+  ['blue_36',['blue',['../main_8cpp.html#ab03401269744146a09b96acc8df0f91b',1,'main.cpp']]]
 ];

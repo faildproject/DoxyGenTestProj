@@ -27,14 +27,16 @@ var NAVTREE =
   [ "DoxyGenTest", "index.html", [
     [ "Overview", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html", [
       [ "Variables", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md1", null ],
-      [ "Functions", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md2", null ]
+      [ "Functions", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md2", null ],
+      [ "Classes", "md__c___users_faildproject__documents__platform_i_o__projects__doxy_gen_test_proj_readme.html#autotoc_md3", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
