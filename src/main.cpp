@@ -2,6 +2,23 @@
  * @file main.cpp
  * @author Philipp Heise (philipp.heise.2012@gmail.com)
  * @brief Simple test the Doxygen-Power
+ *
+ * Static IAQ:
+ *  The main difference between IAQ and static IAQ (sIAQ) relies in 
+ *  the scaling factor calculated based on the recent sensor history. 
+ *  The sIAQ output has been optimized for stationary applications 
+ *  (e.g. fixed indoor devices) whereas the IAQ output is ideal for 
+ *  mobile application (e.g. carry-on devices).
+ * bVOCeq estimate:
+ *  The breath VOC equivalent output (bVOCeq) estimates the total VOC 
+ *  concentration [ppm] in the environment. It is calculated based on 
+ *  the sIAQ output and derived from lab tests.
+ * CO2eq estimate:
+ *  Estimates a CO2-equivalent (CO2eq) concentration [ppm] in the environment. 
+ *  It is also calculated based on the sIAQ output and derived from VOC 
+ *  measurements and correlation from field studies.
+
+Since bVOCeq and CO2eq are based on the sIAQ output, they are expected to perform optimally in stationnary applications where the main source of VOCs in the environment comes from human activity (e.g. in a bedroom)
  * @version 0.1
  * @date 2021-04-25
  * 
@@ -65,11 +82,41 @@ void loop(void)
     output += ", " + String(iaqSensor.pressure);
     output += ", " + String(iaqSensor.rawHumidity);
     output += ", " + String(iaqSensor.gasResistance);
+    /**
+     * @brief Der IAQ–Wert wird durch einen intelligenten Algorithmus berechnet 
+     * und beinhaltet unterschiedlichste Gaskonzentrationen die zur Luftqualität 
+     * im Innenbereich beitragen. Der IAQ-Wert lässt keine direkten Rückschlüsse 
+     * auf einzelne auftretende Konzentrationen zu, stellt diese aber im 
+     * Zusammenhang als Gesamtqualität bereit.
+     * 
+     */
     output += ", " + String(iaqSensor.iaq);
+    /**
+     * @brief 
+     * UNRELIABLE 0 Sensor data is unreliable, the sensor must be calibrated
+     * LOW_ACCURACY 1 Low accuracy, sensor should be calibrated
+     * MEDIUM_ACCURACY 2 Medium accuracy, sensor calibration may improve performance
+     * HIGH_ACCURACY 3 High accuracy
+     * Will it be calibrated automaticly?
+     */
     output += ", " + String(iaqSensor.iaqAccuracy);
     output += ", " + String(iaqSensor.temperature);
     output += ", " + String(iaqSensor.humidity);
     output += ", " + String(iaqSensor.staticIaq);
+    /**
+     * @brief Kohlenstoffdioxid (CO2) ist das Treibhausgas, das massemäßig am 
+     * häufigsten vorkommt. Es hat ein CO2-Äquivalent von eins und bildet die 
+     * Basis der Bewertung. Wie stark sich andere Gase auf unser Klima auswirken,
+     * zeigt die folgende Tabelle.
+     * Gas 	                          Vorkommen/ Verursacher(Beispiele) CO2e(20 Jahre)  CO2e(100 Jahre)
+     * ------------------------------------------------------------------------------------------------
+     * Kohlenstoffdioxid  (CO2) 	    Verbrennung	                      1               1
+     * Methan  (CH4)	                Reisanbau, Kläranlagen 	          84 	            28
+     * Lachgas (N2O)                  Dünger, Biomasseverbrennung	      264 	          265
+     * FCKW 	                        Sprühdosen, Kältemittel	          10900 	        13900
+     * Schwefelhexafluorid(SF6) 	    Gas zur Magnesiumherstellung	    17500 	        23500
+     * 
+     */
     output += ", " + String(iaqSensor.co2Equivalent);
     output += ", " + String(iaqSensor.breathVocEquivalent);
     Serial.println(output);
