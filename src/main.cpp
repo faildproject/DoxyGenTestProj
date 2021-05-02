@@ -64,7 +64,7 @@ void setup(void)
     BSEC_OUTPUT_SENSOR_HEAT_COMPENSATED_HUMIDITY,
   };
 
-  iaqSensor.updateSubscription(sensorList, 10, BSEC_SAMPLE_RATE_LP);
+  iaqSensor.updateSubscription(sensorList, 10, BSEC_SAMPLE_RATE_CONTINUOUS);
   checkIaqSensorStatus();
 
   // Print the header
