@@ -16,5 +16,6 @@
 
 void initIaqSensor(Bsec& t_iaqSensor, uint8_t t_addr, TwoWire &t_i2c_bus);
 void checkIaqSensorStatus(Bsec& t_iaqSensor);
+void printData(Bsec& t_iaqSensor, Stream &t_stream);
 
 #endif
